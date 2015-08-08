@@ -92,9 +92,18 @@ var app = app || {};
 		},
 
 		clearCompleted:function(){
-			_.invoke(app.Todos.completed(), 'destory');
+			_.invoke(app.Todos.completed(), 'destroy');
 			return false;
 		},
+		// Invoke a method (with arguments) on every item in a collection.
+		/*
+		_.invoke = function(obj, method) {
+			var args = slice.call(arguments, 2);
+			var isFunc = _.isFunction(method);
+			return _.map(obj, function(value) {
+			  return (isFunc ? method : value[method]).apply(value, args);
+			});
+		};*/
 
 		toggleAllComplete:function(){
 			var completed = this.allCheckbox.checked;

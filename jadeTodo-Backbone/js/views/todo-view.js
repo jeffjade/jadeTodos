@@ -11,9 +11,10 @@ var app = app || {};
 
 		events:{
 			'click .toggle': 'toggleCompleted',
-			'dbclick label': 'edit',
+			'dblclick label': 'edit',
 			'click .destroy': 'clear',
 			'keypress .edit': 'updateOnEnter',
+			'keydown .edit': 'revertOnEscape',
 			'blur .edit': 'close'
 		},
 
@@ -83,6 +84,14 @@ var app = app || {};
 		clear:function(){
 			alert("dd");
 			this.model.destroy();
-		}
+		},
+
+		revertOnEscape: function (e) {
+			if (e.which === ESC_KEY) {
+				this.$el.removeClass('editing');
+				// Also reset the hidden input back to the original value.
+				this.$input.val(this.model.get('title'));
+			}
+		},
 	});
 })(jQuery);

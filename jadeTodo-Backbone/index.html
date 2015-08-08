@@ -2,14 +2,14 @@
 <html lang="en" data-framework="backbonejs">
 	<head>
 		<meta charset="utf-8">
-		<title>Backbone.js • TodoMVC</title>
+		<title>JadeTodos</title>
 		<link rel="stylesheet" href="node_modules/todomvc-common/base.css">
 		<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
 	</head>
 	<body>
 		<section id="todoapp">
 			<header id="header">
-				<h1>todos</h1>
+				<h1>JadetodoS</h1>
 				<input id="new-todo" placeholder="What needs to be done?" autofocus>
 			</header>
 			<section id="main">
@@ -19,11 +19,13 @@
 			</section>
 			<footer id="footer"></footer>
 		</section>
+		
 		<footer id="info">
-			<p>Double-click to edit a todo</p>
-			<p>Written by <a href="https://github.com/addyosmani">Addy Osmani</a></p>
+			<p>Double-Click To Edit A Todo</p>
+			<p>Imitated By <a href="https://github.com/jeffjade">JeffJade</a></p>
 			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 		</footer>
+
 		<script type="text/template" id="item-template">
 			<div class="view">
 				<input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
@@ -32,6 +34,7 @@
 			</div>
 			<input class="edit" value="<%- title %>">
 		</script>
+
 		<script type="text/template" id="stats-template">
 			<span id="todo-count"><strong><%= remaining %></strong> <%= remaining === 1 ? 'item' : 'items' %> left</span>
 			<ul id="filters">
@@ -46,9 +49,10 @@
 				</li>
 			</ul>
 			<% if (completed) { %>
-			<button id="clear-completed">Clear completed</button>
+			<button id="clear-completed">Clear Completed</button>
 			<% } %>
 		</script>
+
 		<script src="node_modules/todomvc-common/base.js"></script>
 		<script src="node_modules/jquery/dist/jquery.js"></script>
 		<script src="node_modules/underscore/underscore.js"></script>
