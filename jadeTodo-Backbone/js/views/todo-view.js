@@ -82,7 +82,6 @@ var app = app || {};
 		},
 
 		clear:function(){
-			alert("dd");
 			this.model.destroy();
 		},
 
